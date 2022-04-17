@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #000000;
+    font-family: 'Arial', san-serif;
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.header {
+    background: #FFF;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.header .header-navbar {
+    position: relative;
+    padding: 20px 0;
+}
+
+.header .header-navbar .header-navbar__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-transform: uppercase;
+}
+
+.header .header-navbar ul li {
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item:not(.submenu-item) {
+    margin-right: 50px;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item .nav-item__submenu {
+    background: #FFF;
+    position: absolute;
+    padding: 0;
+    border: 1px solid #000000;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item .nav-item__submenu .submenu-item {
+    padding: 6px 0;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item .nav-item__submenu .submenu-item:not(:last-child) {
+    border-bottom: 1px solid #000000;
+}
+
+.header .header-navbar .header-navbar__wrapper .linkmain,
+.header .header-navbar .header-navbar__wrapper .linksub {
+    text-decoration: none;
+}
+
+.header .header-navbar .header-navbar__wrapper .linkmain {
+    color: #000000;
+}
+
+.header .header-navbar .header-navbar__wrapper .linksub {
+    color: green;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item.has-submenus::after {
+    content: '\21E3';
+    font-size: 14px;
+    padding-left: 5px;
+    color: blue;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    s
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item.this-submenus::after {
+    content: '\21E1';
+    font-size: 14px;
+    padding-left: 5px;
+    color: blue;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+.header .header-navbar .header-navbar__wrapper .nav-item .nav-item__submenu.opening {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    -ms-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
